@@ -23,9 +23,10 @@ spec:
           httpGet:
             path: /
             port: 8080
+        terminationGracePeriodSeconds: 30 
 strategy:
   type: RollingUpdate
   rollingUpdate:
     maxSurge: 1
-    maxUnavailable: 2
+    maxUnavailable: 0
 
