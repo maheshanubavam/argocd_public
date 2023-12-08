@@ -4,10 +4,6 @@ metadata:
   name: tomcat-deployment-rolling-update
 spec:
   replicas: 2
-  selector:
-    matchLabels:
-      app: tomcat
-      role: rolling-update
   template:
     metadata:
       labels:
@@ -16,10 +12,13 @@ spec:
     spec:
       containers:
       - name: tomcat-container
-        image: tomcat:7
-        terminationGracePeriodSeconds: 60
+        image: tomcat:8
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
   strategy:
     type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 1
+    rollingUp      maxSurge: 50%
