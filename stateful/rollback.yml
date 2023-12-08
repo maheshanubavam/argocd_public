@@ -24,7 +24,6 @@ spec:
             port: 8080
         terminationGracePeriodSeconds: 30  # Adjust as needed
   updateStrategy:
-    rollingUpdate:
-      partition: 0    
+    rollingUpdate:  
       maxSurge: 2
       maxUnavailable: 1
