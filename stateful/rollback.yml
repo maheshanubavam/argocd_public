@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: tomcat-container
-        image: tomcat:7
+        image: tomcat:8
         ports:
         - containerPort: 8080
         readinessProbe:
