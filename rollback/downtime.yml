@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: tomcat-container
-        image: tomcat:9
-        ports:
+        image: tomcat:10
+      terminationGracePeriodSeconds: 60
   strategy:
     type: RollingUpdate
     rollingUpdate:
