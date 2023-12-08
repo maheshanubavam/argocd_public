@@ -1,13 +1,9 @@
-apiVersion: apps/v1
+apiVersion: apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tomcat-deployment-rolling-update
 spec:
   replicas: 2
-  selector:
-    matchLabels:
-      app: tomcat
-      role: rolling-update
   template:
     metadata:
       labels:
@@ -23,9 +19,7 @@ spec:
           httpGet:
             path: /
             port: 8080
-      terminationGracePeriodSeconds: 30  # Set this to a lower value
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1
-      minReadySeconds: 0  # Set this to a lower value
+      maxSurge: 100%
