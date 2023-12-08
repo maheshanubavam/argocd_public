@@ -4,6 +4,10 @@ metadata:
   name: tomcat-deployment-rolling-update
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: tomcat
+      role: rolling-update
   template:
     metadata:
       labels:
