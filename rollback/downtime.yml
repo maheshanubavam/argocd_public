@@ -18,11 +18,6 @@ spec:
       - name: tomcat-container
         image: tomcat:8
         ports:
-        - containerPort: 8080
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8080
   strategy:
     type: RollingUpdate
     rollingUpdate:
