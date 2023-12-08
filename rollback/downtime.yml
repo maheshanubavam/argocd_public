@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tomcat-container
-        image: tomcat:9
+        image: tomcat:7
   strategy:
     type: RollingUpdate
     rollingUp      maxSurge: 50%
