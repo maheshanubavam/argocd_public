@@ -23,7 +23,7 @@ spec:
           httpGet:
             path: /
             port: 8080
-        terminationGracePeriodSeconds: 30 
+        terminationGracePeriodSeconds: 10 
 strategy:
   type: RollingUpdate
   rollingUpdate:
