@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tomcat-container
-        image: tomcat:8
+        image: tomcat:9
         terminationGracePeriodSeconds: 60
   strategy:
     type: RollingUpdate
