@@ -27,5 +27,5 @@ strategy:
   type: RollingUpdate
   rollingUpdate:
     maxSurge: 1
-    maxUnavailable: 2
+    maxUnavailable: 1
 
